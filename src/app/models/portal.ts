@@ -1,0 +1,1 @@
+export type Portal = 'MojeMaleZoo.pl' | 'zwierzakowe-akcesoria.com' | 'shiibainou.jp'

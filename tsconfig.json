@@ -2,7 +2,45 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
+    "paths": {
+      "@fake-products-management/*": [
+        "app/*"
+      ],
+      "@fake-products-management/core/*": [
+        "app/core/*"
+      ],
+      "@fake-products-management/guards/*": [
+        "app/guards/*"
+      ],
+      "@fake-products-management/modals/*": [
+        "app/modals/*"
+      ],
+      "@fake-products-management/models/*": [
+        "app/models/*"
+      ],
+      "@fake-products-management/providers/*": [
+        "app/providers/*"
+      ],
+      "@fake-products-management/resolvers/*": [
+        "app/resolvers/*"
+      ],
+      "@fake-products-management/services/*": [
+        "app/services/*"
+      ],
+      "@fake-products-management/styles/*": [
+        "app/styles/*"
+      ],
+      "@fake-products-management/ui/*": [
+        "app/ui/*"
+      ],
+      "@fake-products-management/assets/*": [
+        "app/assets/*"
+      ],
+      "@fake-products-management/env/*": [
+        "environments/*"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -17,12 +55,24 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
+    "module": "es2020",
     "lib": [
-      "ES2022",
+      "es2020",
       "dom"
-    ]
+    ],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "listEmittedFiles": true,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "diagnostics": true,
+    "extendedDiagnostics": true,
+    "removeComments": true,
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

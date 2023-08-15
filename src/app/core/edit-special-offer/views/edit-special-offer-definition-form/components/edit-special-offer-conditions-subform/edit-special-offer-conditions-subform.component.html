@@ -1,0 +1,105 @@
+<form [formGroup]="form" class="offer-content--section">
+  <div class="offer-content--section__header">
+    <h1 class="offer-content--section__header__text">Conditions</h1>
+    <span class="offer-content--section__header__info">* is required</span>
+  </div>
+
+  <hr class="offer-content--section__divider"/>
+
+  <div class="offer-content--form">
+    <div class="offer-content--form__input">
+      <mat-form-field>
+        <mat-label>Portal</mat-label>
+        <mat-select formControlName="portal" placeholder="Portal">
+          <mat-option value="MojeMaleZoo.pl">MojeMaleZoo.pl</mat-option>
+          <mat-option value="zwierzakowe-akcesoria.com">zwierzakowe-akcesoria.com</mat-option>
+          <mat-option value="shiibainou.jp">shiibainou.jp</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('portal').hasError('required')">Required</mat-error>
+      </mat-form-field>
+
+      <div class="offer-content--form__input__tooltip">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+
+    <div class="offer-content--form__input">
+      <mat-form-field>
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="orderType" placeholder="Type">
+          <mat-option value="private">Private</mat-option>
+          <mat-option value="commercial">Commercial</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('orderType').hasError('required')">Required</mat-error>
+      </mat-form-field>
+
+      <div class="offer-content--form__input__tooltip">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+
+    <div class="offer-content--form__input">
+      <mat-form-field>
+        <mat-label>Benefit amount</mat-label>
+        <input readonly formControlName="benefitAmount" matInput placeholder="Benefit amount" type="number">
+        <mat-icon class="offer-content--form__input__locked" matSuffix>lock</mat-icon>
+      </mat-form-field>
+
+      <div class="offer-content--form__input__tooltip">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <hr class="offer-content--section__divider"/>
+
+  <div class="offer-content--form">
+    <div class="offer-content--form__input">
+      <mat-form-field>
+        <mat-label>Start date</mat-label>
+        <input formControlName="startDate" matInput [matDatepicker]="startPicker" placeholder="Start date">
+        <mat-datepicker-toggle matIconSuffix [for]="startPicker"></mat-datepicker-toggle>
+        <mat-datepicker #startPicker></mat-datepicker>
+        <mat-error *ngIf="form.get('startDate').hasError('required')">Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Finish date</mat-label>
+        <input formControlName="endDate" matInput [matDatepicker]="finishPicker" placeholder="Finish date">
+        <mat-datepicker-toggle matIconSuffix [for]="finishPicker"></mat-datepicker-toggle>
+        <mat-datepicker #finishPicker></mat-datepicker>
+      </mat-form-field>
+
+      <div class="offer-content--form__input__tooltip">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+
+    <div class="offer-content--form__input">
+      <mat-radio-group formControlName="priceConditions">
+        <mat-radio-button value="business">Business conditions</mat-radio-button>
+        <mat-radio-button value="base">Base price 100%</mat-radio-button>
+      </mat-radio-group>
+
+      <div class="offer-content--form__input__tooltip offer-content--form__input__tooltip__sm-pt">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+
+    <div class="offer-content--form__input">
+      <mat-checkbox formControlName="connectedWithOtherPromotions">Connect with other promotions</mat-checkbox>
+
+      <div class="offer-content--form__input__tooltip offer-content--form__input__tooltip__sm-pt">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+
+    <div class="offer-content--form__input">
+      <mat-checkbox formControlName="backPromotion">Back promotion</mat-checkbox>
+
+      <div class="offer-content--form__input__tooltip offer-content--form__input__tooltip__sm-pt">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+  </div>
+</form>

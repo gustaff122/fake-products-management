@@ -30,7 +30,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "src/app/styles/normalize.scss",
+              "src/app/styles/variables.scss",
+              "src/app/styles/material-over.scss"
             ],
             "scripts": []
           },
@@ -93,7 +97,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "src/app/styles/normalize.scss",
+              "src/app/styles/variables.scss",
+              "src/app/styles/material-over.scss"
             ],
             "scripts": []
           }

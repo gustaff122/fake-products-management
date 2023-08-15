@@ -1,0 +1,14 @@
+<div class="modal">
+  <div class="modal--header">
+    <h1 class="modal--header__title">{{ data.title }}</h1>
+    <h2 class="modal--header__subtitle"><span class="modal--header__subtitle__color">{{ data.subtitle }}</span> ?</h2>
+  </div>
+
+  <button [mat-dialog-close]="true" mat-raised-button color="accent">
+    Yes
+  </button>
+
+  <button (click)="closeHandler()" mat-raised-button>
+    No, cancel
+  </button>
+</div>

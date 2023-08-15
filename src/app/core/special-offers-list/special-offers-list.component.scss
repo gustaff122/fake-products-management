@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.list {
+  &--container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--content {
+    background-color: var(--smoke);
+    min-width: 520px;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &--add-btn {
+    width: 100%;
+  }
+
+  &--actions {
+    display: flex;
+    gap: 18px;
+
+    &__edit {
+      color: var(--sky);
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &__delete {
+      color: var(--cherry);
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

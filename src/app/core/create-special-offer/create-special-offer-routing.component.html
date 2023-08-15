@@ -1,0 +1,144 @@
+<div class="offer">
+  <div>
+    <ng-container [ngTemplateOutlet]="(!(this.form.get('definition.description.marketingName').value) && !(this.form.get('definition.description.technicalName').value)) ? disabledTpl : enabledTpl"></ng-container>
+  </div>
+
+  <div class="offer--container" [formGroup]="form">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<ng-template #disabledTpl>
+  <div class="offer--steps">
+    <app-form-step-header
+      [number]="1"
+      header="definition"
+    ></app-form-step-header>
+
+    <app-form-step-header
+      [disabled]="true"
+      [number]="2"
+      header="choose products">
+    </app-form-step-header>
+
+    <app-form-step-header
+      [disabled]="true"
+      [number]="3"
+      header="exclude products">
+    </app-form-step-header>
+
+    <app-form-step-header
+      [disabled]="true"
+      [number]="4"
+      header="bonus products">
+    </app-form-step-header>
+
+    <app-form-step-header
+      [disabled]="true"
+      [number]="5"
+      header="products limits">
+    </app-form-step-header>
+
+    <app-form-step-header
+      [disabled]="true"
+      [number]="6"
+      header="choose clients">
+    </app-form-step-header>
+
+    <app-form-step-header
+      [disabled]="true"
+      [number]="7"
+      header="exclude clients">
+    </app-form-step-header>
+
+    <app-form-step-header
+      [disabled]="true"
+      [number]="8"
+      header="clients limits">
+    </app-form-step-header>
+
+    <app-form-step-header
+      [disabled]="true"
+      [number]="9"
+      header="summary">
+    </app-form-step-header>
+  </div>
+</ng-template>
+
+<ng-template #enabledTpl>
+  <div class="offer--steps">
+    <a routerLink="definition">
+      <app-form-step-header
+        [active]="routePath === 'definition'"
+        [number]="1"
+        header="definition"
+      >
+      </app-form-step-header>
+    </a>
+
+    <a routerLink="choose-products">
+      <app-form-step-header
+        [active]="routePath === 'choose-products'"
+        [number]="2"
+        header="choose products">
+      </app-form-step-header>
+    </a>
+
+    <a routerLink="exclude-products">
+      <app-form-step-header
+        [active]="routePath === 'exclude-products'"
+        [number]="3"
+        header="exclude products">
+      </app-form-step-header>
+    </a>
+
+    <a routerLink="bonus-products">
+      <app-form-step-header
+        [active]="routePath === 'bonus-products'"
+        [number]="4"
+        header="bonus products">
+      </app-form-step-header>
+    </a>
+
+    <a routerLink="products-limits">
+      <app-form-step-header
+        [active]="routePath === 'products-limits'"
+        [number]="5"
+        header="products limits">
+      </app-form-step-header>
+    </a>
+
+    <a routerLink="choose-clients">
+      <app-form-step-header
+        [active]="routePath === 'choose-clients'"
+        [number]="6"
+        header="choose clients">
+      </app-form-step-header>
+    </a>
+
+    <a routerLink="exclude-clients">
+      <app-form-step-header
+        [active]="routePath === 'exclude-clients'"
+        [number]="7"
+        header="exclude clients">
+      </app-form-step-header>
+    </a>
+
+    <a routerLink="clients-limits">
+      <app-form-step-header
+        [active]="routePath === 'clients-limits'"
+        [number]="8"
+        header="clients limits">
+      </app-form-step-header>
+    </a>
+
+    <a routerLink="summary">
+      <app-form-step-header
+        [active]="routePath === 'summary'"
+        [number]="9"
+        header="summary">
+      </app-form-step-header>
+    </a>
+  </div>
+</ng-template>

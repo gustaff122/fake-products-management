@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.modal {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &--header {
+    &__title {
+      font-size: var(--text-xl);
+      text-align: center;
+      margin: 0;
+    }
+
+    &__subtitle {
+      font-size: var(--text-lg);
+      text-align: center;
+
+      &__color {
+        color: var(--sky);
+      }
+    }
+  }
+}

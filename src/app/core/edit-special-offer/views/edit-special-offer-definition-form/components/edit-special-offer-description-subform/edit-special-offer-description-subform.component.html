@@ -1,0 +1,68 @@
+<form [formGroup]="form" class="offer-content--section">
+  <div class="offer-content--section__header">
+    <h1 class="offer-content--section__header__text">Description</h1>
+    <span class="offer-content--section__header__info">* is required</span>
+  </div>
+
+  <hr class="offer-content--section__divider"/>
+
+  <div class="offer-content--form">
+    <div class="offer-content--form__input">
+      <mat-form-field>
+        <mat-label>Marketing name</mat-label>
+        <input readonly formControlName="marketingName" matInput placeholder="Marketing name" type="text">
+        <mat-icon class="offer-content--form__input__locked" matSuffix>lock</mat-icon>
+      </mat-form-field>
+
+      <div class="offer-content--form__input__tooltip">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+
+    <div class="offer-content--form__input">
+      <mat-form-field>
+        <mat-label>Technical name</mat-label>
+        <input formControlName="technicalName" matInput placeholder="Technical name" type="text">
+        <mat-error *ngIf="form.get('technicalName').hasError('maxlength')">Over 32 characters. Too much.</mat-error>
+      </mat-form-field>
+
+      <div class="offer-content--form__input__tooltip">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+
+    <div class="offer-content--form__input">
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea formControlName="description" matInput placeholder="Description"></textarea>
+        <mat-error *ngIf="form.get('description').hasError('maxlength')">Over 4096 characters. Too much.</mat-error>
+      </mat-form-field>
+
+      <div class="offer-content--form__input__tooltip">
+        <mat-icon matTooltip="Lorem ipsum">info</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="offer-content--form">
+    <div class="offer-content--section__header">
+      <h1 class="offer-content--section__header__text">Catalog promotion tutorial:</h1>
+    </div>
+
+    <hr class="offer-content--section__divider"/>
+
+    <div class="offer-content--text">
+      <p>
+        The Beatles were an English rock band, formed in Liverpool in 1960, that comprised John Lennon, Paul McCartney, George Harrison and Ringo Starr. They are regarded as the most influential band of all time and were integral to the development of 1960s counterculture and popular music's recognition as an art form. Rooted in skiffle, beat, and 1950s rock 'n' roll, their sound incorporated elements of classical music and traditional pop in innovative ways; the band also explored music
+        styles ranging from folk and Indian music to psychedelia and hard rock. As pioneers in recording, songwriting and artistic presentation, the Beatles revolutionised many aspects of the music industry and were often publicised as leaders of the era's youth and sociocultural movements.
+
+        <br>
+        <br>
+
+        Led by primary songwriters Lennon and McCartney, the Beatles evolved from Lennon's previous group, the Quarrymen, and built their reputation playing clubs in Liverpool and Hamburg over three years from 1960, initially with Stuart Sutcliffe playing bass. The core trio of Lennon, McCartney and Harrison, together since 1958, went through a succession of drummers, including Pete Best, before asking Starr to join them in 1962. Manager Brian Epstein moulded them into a professional act, and
+        producer George Martin guided and developed their recordings, greatly expanding their domestic success after signing to EMI Records and achieving their first hit, "Love Me Do", in late 1962. As their popularity grew into the intense fan frenzy dubbed "Beatlemania", the band acquired the nickname "the Fab Four", with Epstein, Martin or another member of the band's entourage sometimes informally referred to as a "fifth Beatle".
+      </p>
+    </div>
+  </div>
+
+</form>

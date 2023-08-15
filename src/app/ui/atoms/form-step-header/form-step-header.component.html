@@ -1,0 +1,10 @@
+<div class="step">
+  <div [ngClass]="{'step--number__active': active, 'step--number__disabled': disabled }" class="step--number">
+    {{ number }}
+  </div>
+
+  <div [ngClass]="{'step--header__active': active, 'step--header__disabled': disabled }" class="step--header">
+    <span>{{ header }}</span>
+    <mat-icon *ngIf="disabled" class="step--header__tooltip" matTooltip="Lorem ipsum">info</mat-icon>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+export const SPECIAL_OFFER = Symbol('SPECIAL_OFFER');
