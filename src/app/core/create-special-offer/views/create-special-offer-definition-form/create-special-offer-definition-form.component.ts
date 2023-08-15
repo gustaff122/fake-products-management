@@ -9,8 +9,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CreateSpecialOfferDefinitionForm } from '../../create-special-offer-routing.component';
-import { CreateSpecialOfferDescriptionSubformComponent } from './components/edit-special-offer-description-subform/create-special-offer-description-subform.component';
-import { CreateSpecialOfferConditionsSubformComponent } from './components/edit-special-offer-conditions-subform/create-special-offer-conditions-subform.component';
+import { CreateSpecialOfferDescriptionSubformComponent } from './components/create-special-offer-description-subform/create-special-offer-description-subform.component';
+import { CreateSpecialOfferConditionsSubformComponent } from './components/create-special-offer-conditions-subform/create-special-offer-conditions-subform.component';
 
 @Component({
   selector: 'app-create-special-offer-definition-form',

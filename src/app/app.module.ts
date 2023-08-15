@@ -8,6 +8,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { titleProvider } from '@fake-products-management/providers/title-provider/title.provider';
 
 const material = [
   MatNativeDateModule,
@@ -32,6 +33,7 @@ const materialProviders = [
   ],
   providers: [
     ...materialProviders,
+    titleProvider,
   ],
   bootstrap: [ AppComponent ],
 })

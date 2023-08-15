@@ -25,46 +25,47 @@ const routes: Routes = [
       {
         path: 'definition',
         component: EditSpecialOfferDefinitionFormComponent,
+        title: 'Edit definition',
       },
       {
         path: 'choose-products',
         component: EditSpecialOfferDummyFormComponent,
-        canActivate: [],
+        title: 'Choose products',
       },
       {
         path: 'exclude-products',
         component: EditSpecialOfferDummyFormComponent,
-        canActivate: [],
+        title: 'Exclude products',
       },
       {
         path: 'bonus-products',
         component: EditSpecialOfferDummyFormComponent,
-        canActivate: [],
+        title: 'Add bonuses',
       },
       {
         path: 'products-limits',
         component: EditSpecialOfferDummyFormComponent,
-        canActivate: [],
+        title: 'Limit products',
       },
       {
         path: 'choose-clients',
         component: EditSpecialOfferDummyFormComponent,
-        canActivate: [],
+        title: 'Choose clients',
       },
       {
         path: 'exclude-clients',
         component: EditSpecialOfferDummyFormComponent,
-        canActivate: [],
+        title: 'Exclude products',
       },
       {
         path: 'clients-limits',
         component: EditSpecialOfferDummyFormComponent,
-        canActivate: [],
+        title: 'Limit clients',
       },
       {
         path: 'summary',
         component: EditSpecialOfferSummaryComponent,
-        canActivate: [],
+        title: 'Summary',
       },
       {
         path: '**',

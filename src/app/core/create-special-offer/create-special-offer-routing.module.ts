@@ -4,7 +4,7 @@ import { CreateSpecialOfferRoutingComponent } from './create-special-offer-routi
 import { CreateSpecialOfferDefinitionFormComponent } from './views/create-special-offer-definition-form/create-special-offer-definition-form.component';
 import { CreateSpecialOfferDummyFormComponent } from './views/create-special-offer-dummy-form/create-special-offer-dummy-form.component';
 import { CreateSpecialOfferSummaryComponent } from './views/create-special-offer-summary/create-special-offer-summary.component';
-import { hasDraftMarketingNameGuard } from '@fake-products-management/guards/has-draft-marketing-name-guard/has-draft-marketing-name.guard';
+import { hasDraftMarketingOrTechnicalNameGuard } from '@fake-products-management/guards/has-draft-marketing-name-guard/has-draft-marketing-or-technical-name.guard';
 
 const routes: Routes = [
   {
@@ -19,46 +19,55 @@ const routes: Routes = [
       {
         path: 'definition',
         component: CreateSpecialOfferDefinitionFormComponent,
+        title: 'Create definition',
       },
       {
         path: 'choose-products',
         component: CreateSpecialOfferDummyFormComponent,
-        canActivate: [ hasDraftMarketingNameGuard ],
+        title: 'Choose products',
+        canActivate: [ hasDraftMarketingOrTechnicalNameGuard ],
       },
       {
         path: 'exclude-products',
         component: CreateSpecialOfferDummyFormComponent,
-        canActivate: [ hasDraftMarketingNameGuard ],
+        title: 'Exclude products',
+        canActivate: [ hasDraftMarketingOrTechnicalNameGuard ],
       },
       {
         path: 'bonus-products',
         component: CreateSpecialOfferDummyFormComponent,
-        canActivate: [ hasDraftMarketingNameGuard ],
+        title: 'Add bonuses',
+        canActivate: [ hasDraftMarketingOrTechnicalNameGuard ],
       },
       {
         path: 'products-limits',
         component: CreateSpecialOfferDummyFormComponent,
-        canActivate: [ hasDraftMarketingNameGuard ],
+        title: 'Limit products',
+        canActivate: [ hasDraftMarketingOrTechnicalNameGuard ],
       },
       {
         path: 'choose-clients',
         component: CreateSpecialOfferDummyFormComponent,
-        canActivate: [ hasDraftMarketingNameGuard ],
+        title: 'Choose clients',
+        canActivate: [ hasDraftMarketingOrTechnicalNameGuard ],
       },
       {
         path: 'exclude-clients',
         component: CreateSpecialOfferDummyFormComponent,
-        canActivate: [ hasDraftMarketingNameGuard ],
+        title: 'Exclude products',
+        canActivate: [ hasDraftMarketingOrTechnicalNameGuard ],
       },
       {
         path: 'clients-limits',
         component: CreateSpecialOfferDummyFormComponent,
-        canActivate: [ hasDraftMarketingNameGuard ],
+        title: 'Limit clients',
+        canActivate: [ hasDraftMarketingOrTechnicalNameGuard ],
       },
       {
         path: 'summary',
         component: CreateSpecialOfferSummaryComponent,
-        canActivate: [ hasDraftMarketingNameGuard ],
+        title: 'Summary',
+        canActivate: [ hasDraftMarketingOrTechnicalNameGuard ],
       },
       {
         path: '**',
